@@ -1,8 +1,8 @@
-import FirstStepForm from "./components/step1Form";
+import SecondStepForm from "./components/step2Form";
 function App() {
   return (
     <>
-      <FirstStepForm />
+      <SecondStepForm />
     </>
   );
 }
