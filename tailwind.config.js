@@ -18,6 +18,10 @@ export default {
       fontFamily: {
         ubuntu: "Ubuntu",
       },
+      backgroundImage: {
+        desktopbg: "url('./src/assets/images/bg-sidebar-desktop.svg')",
+        mobilebg: "url('./src/assets/images/bg-sidebar-mobile.svg')",
+      },
     },
   },
   plugins: [],
