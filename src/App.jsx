@@ -1,8 +1,8 @@
-import SideBar from "./components/sideBar";
+import FirstStepForm from "./components/step1Form";
 function App() {
   return (
     <>
-      <SideBar />
+      <FirstStepForm />
     </>
   );
 }
