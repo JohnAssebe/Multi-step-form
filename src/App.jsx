@@ -1,8 +1,8 @@
-import ThirdStepForm from "./components/step3Form";
+import FourthStepForm from "./components/step4Form";
 function App() {
   return (
     <>
-      <ThirdStepForm />
+      <FourthStepForm />
     </>
   );
 }
