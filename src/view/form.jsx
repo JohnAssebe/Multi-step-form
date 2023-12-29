@@ -17,6 +17,7 @@ const Form = () => {
     setFormData({ ...formData, ...form });
   };
   console.log(formData);
+  const backToStep2 = () => setStep(2);
   return (
     <div className="flex items-center justify-center w-full h-screen bg-Magnolia">
       <div className="flex items-start justify-center w-full lg:w-2/3 overflow-hidden bg-white rounded-xl h-[550px]">
@@ -47,9 +48,8 @@ const Form = () => {
           )}
           {step == 4 && (
             <FourthStepForm
+              changeStep={backToStep2}
               formData={formData}
-              updateFormData={updateFormData}
-              nextStep={nextStep}
               previousStep={previousStep}
             />
           )}
