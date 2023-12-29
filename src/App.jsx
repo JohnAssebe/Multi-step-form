@@ -1,10 +1,6 @@
-import FourthStepForm from "./components/step4Form";
+import Form from "./view/form";
 function App() {
-  return (
-    <>
-      <FourthStepForm />
-    </>
-  );
+  return <Form />;
 }
 
 export default App;

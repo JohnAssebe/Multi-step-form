@@ -1,6 +1,6 @@
 const SideBar = () => {
   return (
-    <div className="object-cover p-4 bg-center bg-no-repeat bg-cover rounded-xl bg-desktopbg">
+    <div className="object-cover h-full p-4 bg-center bg-no-repeat bg-cover bg-desktopbg">
       <div className="flex flex-col items-start justify-start gap-8 py-10 text-md text-White font-ubuntu">
         <div className="flex items-center justify-center gap-3">
           <div className="flex items-center justify-center w-12 h-12 bg-transparent border-2 rounded-full border-White">

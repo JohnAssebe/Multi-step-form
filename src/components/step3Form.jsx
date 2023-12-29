@@ -1,10 +1,17 @@
+/*eslint-disable*/
 import { useState } from "react";
-const ThirdStepForm = () => {
+const ThirdStepForm = ({ updateFormData, nextStep, previousStep }) => {
   const [selected, setSelected] = useState([]);
   const updateSelected = (term) =>
     !selected.includes(term)
       ? setSelected((selected) => [...selected, term])
       : setSelected((selected) => selected.filter((ele) => ele != term));
+  const handleUpdate = () => {
+    updateFormData({
+      addOns: selected,
+    });
+    nextStep();
+  };
   return (
     <section className="w-full px-4 py-10 bg-White">
       <div className="max-w-md px-2 mx-auto font-ubuntu">
@@ -135,8 +142,13 @@ const ThirdStepForm = () => {
           </div>
 
           <div className="flex items-center justify-between w-full px-1 mt-20">
-            <button className="text-md text-Coolgray">Go Back</button>
-            <button className="px-4 py-2 text-white text-md bg-Marineblue rounded-xl">
+            <button className="text-md text-Coolgray" onClick={previousStep}>
+              Go Back
+            </button>
+            <button
+              className="px-4 py-2 text-white text-md bg-Marineblue rounded-xl"
+              onClick={() => handleUpdate()}
+            >
               Next Step
             </button>
           </div>

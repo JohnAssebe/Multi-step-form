@@ -1,6 +1,19 @@
-const FirstStepForm = () => {
+/*eslint-disable*/
+import { useFormik } from "formik";
+const FirstStepForm = ({ formData, updateFormData, nextStep }) => {
+  const formik = useFormik({
+    initialValues: {
+      name: formData?.name || "",
+      email: formData?.email || "",
+      phoneNumber: formData?.phoneNumber || "",
+    },
+    onSubmit: (values) => {
+      updateFormData(values);
+      nextStep();
+    },
+  });
   return (
-    <form className="w-full px-4 py-10 bg-White">
+    <form className="w-full px-4 py-10 bg-White" onSubmit={formik.handleSubmit}>
       <div className="max-w-md px-2 mx-auto font-ubuntu">
         <h4 className="text-2xl font-bold text-Marineblue">Personal info</h4>
         <p className="text-base text-Coolgray">
@@ -16,6 +29,9 @@ const FirstStepForm = () => {
               type="text"
               className="w-full px-3 py-2 border rounded-lg outline-none focus:border-Marineblue border-slate-300 placeholder:text-Coolgray placeholder:text-sm"
               placeholder="e.g. Stephen King"
+              name="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
             />
           </div>
 
@@ -28,6 +44,9 @@ const FirstStepForm = () => {
               type="email"
               className="w-full px-3 py-2 border rounded-lg outline-none focus:border-Marineblue border-slate-300 placeholder:text-Coolgray placeholder:text-sm"
               placeholder="e.g. StephenKing@lorem.com"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
             />
           </div>
 
@@ -40,6 +59,9 @@ const FirstStepForm = () => {
               type="tel"
               className="w-full px-3 py-2 border rounded-lg outline-none focus:border-Marineblue border-slate-300 placeholder:text-Coolgray placeholder:text-sm"
               placeholder="e.g. +12 345 678 90"
+              name="phoneNumber"
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange}
             />
           </div>
           <button

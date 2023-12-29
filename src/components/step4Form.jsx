@@ -6,7 +6,7 @@ const FourthStepForm = () => {
         <p className="text-base text-Coolgray">
           Double-check everything looks OK before confirming.
         </p>
-        <div className="w-full py-4 my-10 bg-Alabaster">
+        <div className="w-full py-4 mt-10 mb-2 bg-Alabaster">
           <div className="flex items-center justify-between w-full px-3 py-4 border-b">
             <div>
               <h4 className="text-lg font-bold text-Marineblue">
@@ -27,6 +27,10 @@ const FourthStepForm = () => {
             <p className="text-Coolgray">Larger storage</p>
             <p className="text-Marineblue">+$2/mo</p>
           </div>
+        </div>
+        <div className="flex items-center justify-between w-full px-3 py-2">
+          <p className="text-Coolgray">total(per month)</p>
+          <p className="text-lg font-bold text-Marineblue">+$12/mo</p>
         </div>
         <div className="flex items-center justify-between w-full px-1 mt-20">
           <button className="text-md text-Coolgray">Go Back</button>
