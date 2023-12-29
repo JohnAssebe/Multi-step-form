@@ -21,7 +21,7 @@ const Form = () => {
     <div className="flex items-center justify-center w-full h-screen bg-Magnolia">
       <div className="flex items-start justify-center w-full lg:w-2/3 overflow-hidden bg-white rounded-xl h-[550px]">
         <div className="h-full basis-1/3">
-          <SideBar />
+          <SideBar step={step} />
         </div>
         <div className="basis-2/3">
           {step == 1 && (
@@ -47,6 +47,7 @@ const Form = () => {
           )}
           {step == 4 && (
             <FourthStepForm
+              formData={formData}
               updateFormData={updateFormData}
               nextStep={nextStep}
               previousStep={previousStep}
