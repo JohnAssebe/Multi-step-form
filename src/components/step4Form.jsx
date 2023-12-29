@@ -23,7 +23,10 @@ const FourthStepForm = ({ changeStep, formData, previousStep }) => {
             <p className="font-bold text-Marineblue">$9/mo</p>
           </div>
           {formData.addOns.map((addon, _) => (
-            <div className="flex items-center justify-between w-full px-3 py-2">
+            <div
+              className="flex items-center justify-between w-full px-3 py-2"
+              key={_}
+            >
               <p className="text-Coolgray">{addon}</p>
               <p className="text-Marineblue">
                 {addon == "online service" ? "+$1/mo" : "+$2/mo"}

@@ -1,6 +1,11 @@
 /*eslint-disable*/
 import { useState } from "react";
-const ThirdStepForm = ({ updateFormData, nextStep, previousStep }) => {
+const ThirdStepForm = ({
+  formData,
+  updateFormData,
+  nextStep,
+  previousStep,
+}) => {
   const [selected, setSelected] = useState([]);
   const updateSelected = (term) =>
     !selected.includes(term)
@@ -58,7 +63,9 @@ const ThirdStepForm = ({ updateFormData, nextStep, previousStep }) => {
                 </p>
               </div>
             </div>
-            <p className="text-Purplishblue">+$1/mo</p>
+            <p className="text-Purplishblue">
+              {formData?.plantime == "yearly" ? "$10/yr" : "+$1/mo"}
+            </p>
           </div>
 
           <div
@@ -97,7 +104,10 @@ const ThirdStepForm = ({ updateFormData, nextStep, previousStep }) => {
                 <p className="text-sm text-Coolgray">Extra 1TB of cloud save</p>
               </div>
             </div>
-            <p className="text-Purplishblue">+$2/mo</p>
+            <p className="text-Purplishblue">
+              {" "}
+              {formData?.plantime == "yearly" ? "$20/yr" : "+$2/mo"}
+            </p>
           </div>
 
           <div
@@ -138,7 +148,10 @@ const ThirdStepForm = ({ updateFormData, nextStep, previousStep }) => {
                 </p>
               </div>
             </div>
-            <p className="text-Purplishblue">+$2/mo</p>
+            <p className="text-Purplishblue">
+              {" "}
+              {formData?.plantime == "yearly" ? "$20/yr" : "+$2/mo"}
+            </p>
           </div>
 
           <div className="flex items-center justify-between w-full px-1 mt-20">

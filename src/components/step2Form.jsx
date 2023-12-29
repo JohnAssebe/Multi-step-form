@@ -8,6 +8,7 @@ const SecondStepForm = ({ updateFormData, nextStep, previousStep }) => {
   const [toggle, setToggle] = useState(false);
   const updateToggle = () => setToggle((visible) => !visible);
   const [plan, setPlan] = useState("arcade");
+
   const handleSubmit = () => {
     updateFormData({
       plan: plan,
@@ -33,7 +34,10 @@ const SecondStepForm = ({ updateFormData, nextStep, previousStep }) => {
             <img src={ArcadeImage} alt="arcade" />
             <div className="py-4">
               <h4 className="font-bold text-Marineblue">Arcade</h4>
-              <p className="text-Coolgray">$9/year</p>
+              <p className="text-Coolgray">{toggle ? "$90/year" : "$9/mo"}</p>
+              {toggle && (
+                <p className="text-sm text-Marineblue">2 months free</p>
+              )}
             </div>
           </div>
 
@@ -45,7 +49,10 @@ const SecondStepForm = ({ updateFormData, nextStep, previousStep }) => {
             <img src={AdvancedImage} alt="advanced" />
             <div className="py-4">
               <h4 className="font-bold text-Marineblue">Advanced</h4>
-              <p className="text-Coolgray">$12/year</p>
+              <p className="text-Coolgray">{toggle ? "$120/year" : "$12/mo"}</p>
+              {toggle && (
+                <p className="text-sm text-Marineblue">2 months free</p>
+              )}
             </div>
           </div>
 
@@ -58,7 +65,10 @@ const SecondStepForm = ({ updateFormData, nextStep, previousStep }) => {
             <img src={ProImage} alt="pro" />
             <div className="py-4">
               <h4 className="font-bold text-Marineblue">Pro</h4>
-              <p className="text-Coolgray">$15/year</p>
+              <p className="text-Coolgray">{toggle ? "$150/year" : "$15/mo"}</p>
+              {toggle && (
+                <p className="text-sm text-Marineblue">2 months free</p>
+              )}
             </div>
           </div>
         </div>
@@ -70,7 +80,7 @@ const SecondStepForm = ({ updateFormData, nextStep, previousStep }) => {
           </label>
           <p>Yearly</p>
         </div>
-        <div className="flex items-center justify-between w-full px-1 mt-20">
+        <div className="flex items-center justify-between w-full px-1 mt-14">
           <button
             className="text-md text-Coolgray"
             onClick={(e) => previousStep(e)}

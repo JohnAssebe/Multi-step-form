@@ -41,6 +41,7 @@ const Form = () => {
           )}
           {step == 3 && (
             <ThirdStepForm
+              formData={formData}
               updateFormData={updateFormData}
               nextStep={nextStep}
               previousStep={previousStep}
