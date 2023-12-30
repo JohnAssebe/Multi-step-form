@@ -1,8 +1,8 @@
 /*eslint-disable*/
 const SideBar = ({ step }) => {
   return (
-    <div className="object-cover h-full p-4 bg-center bg-no-repeat bg-cover bg-desktopbg">
-      <div className="flex flex-col items-start justify-start gap-8 py-10 text-md text-White font-ubuntu">
+    <div className="relative object-cover h-[300px] flex items-center justify-center md:items-start md:h-full bg-center bg-no-repeat bg-cover bg-mobilebg md:p-4 md:bg-desktopbg">
+      <div className="flex items-center justify-center gap-8 py-2 md:py-10 md:items-start md:justify-start md:flex-col text-md text-White font-ubuntu">
         <div className="flex items-center justify-center gap-3">
           <div
             className={`flex duration-500 items-center justify-center w-12 h-12 bg-transparent border-2 rounded-full border-White ${
@@ -11,7 +11,7 @@ const SideBar = ({ step }) => {
           >
             <span>1</span>
           </div>
-          <div className="pl-2">
+          <div className="hidden pl-2 md:block">
             <p className="text-Lightgray">Step 1</p>
             <h3 className="font-bold uppercase">Your info</h3>
           </div>
@@ -25,7 +25,7 @@ const SideBar = ({ step }) => {
           >
             <span>2</span>
           </div>
-          <div className="pl-2">
+          <div className="hidden pl-2 md:block">
             <p className="text-Lightgray">Step 2</p>
             <h3 className="font-bold uppercase">Select Plan</h3>
           </div>
@@ -39,7 +39,7 @@ const SideBar = ({ step }) => {
           >
             <span>3</span>
           </div>
-          <div className="pl-2">
+          <div className="hidden pl-2 md:block">
             <p className="text-Lightgray">Step 3</p>
             <h3 className="font-bold uppercase">Add-Ons</h3>
           </div>
@@ -53,7 +53,7 @@ const SideBar = ({ step }) => {
           >
             <span>4</span>
           </div>
-          <div className="pl-2">
+          <div className="hidden pl-2 md:block">
             <p className="text-Lightgray">Step 4</p>
             <h3 className="font-bold uppercase">Summary</h3>
           </div>

@@ -16,15 +16,15 @@ const Form = () => {
   const updateFormData = (form) => {
     setFormData({ ...formData, ...form });
   };
-  console.log(formData);
+  // console.log(formData);
   const backToStep2 = () => setStep(2);
   return (
-    <div className="flex items-center justify-center w-full h-screen bg-Magnolia">
-      <div className="flex items-start justify-center w-full lg:w-2/3 overflow-hidden bg-white rounded-xl h-[550px]">
-        <div className="h-full basis-1/3">
+    <div className="flex items-center justify-center w-full min-h-screen bg-Magnolia">
+      <div className="flex flex-col md:flex-row md:items-start items-center justify-center w-full lg:w-2/3 md:overflow-hidden bg-white rounded-xl h-[550px]">
+        <div className="w-full h-full md:basis-1/3">
           <SideBar step={step} />
         </div>
-        <div className="basis-2/3">
+        <div className="z-20 w-full sm:w-2/3 -mt-14 md:mt-0 md:basis-2/3">
           {step == 1 && (
             <FirstStepForm
               formData={formData}
