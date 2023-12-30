@@ -1,8 +1,8 @@
 /*eslint-disable*/
 import { useState } from "react";
-import ArcadeImage from "../../public/icon-arcade.svg";
-import AdvancedImage from "../../public/icon-advanced.svg";
-import ProImage from "../../public/icon-pro.svg";
+import ArcadeImage from "/images/icon-arcade.svg";
+import AdvancedImage from "/images/icon-advanced.svg";
+import ProImage from "/images/icon-pro.svg";
 import "../styles/switch.css";
 const SecondStepForm = ({ updateFormData, nextStep, previousStep }) => {
   const [toggle, setToggle] = useState(false);
